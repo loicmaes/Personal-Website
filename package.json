@@ -2,19 +2,30 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "prisma": {
+    "schema": "server/database/schema.prisma"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@prisma/client": "5.17.0-dev.38",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@prisma/client": "^5.16.0",
     "nuxt": "^3.12.3",
     "vue": "latest"
   },
   "devDependencies": {
-    "prisma": "^5.16.2"
+    "@eslint/js": "^9.7.0",
+    "@nuxt/eslint-config": "^0.3.13",
+    "eslint": "^9.7.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "globals": "^15.8.0",
+    "prisma": "^5.16.2",
+    "typescript-eslint": "^7.16.1"
   }
 }
